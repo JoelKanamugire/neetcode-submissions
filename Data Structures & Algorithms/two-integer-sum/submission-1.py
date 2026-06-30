@@ -1,0 +1,12 @@
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        my_hash = {}
+
+        for i, n in  enumerate(nums):
+            complement = target - n
+            if complement in my_hash:
+                return [my_hash[complement], i]     
+            else:
+                my_hash[n] = i
+        
+   
